@@ -1,17 +1,20 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg"
+import env from "dotenv"
+
 //sol2 where add button adds visited countries and they are showed on map and it keeps the countries in a list forever as it is a tracker
 const app = express();
 const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+env.config();
 const db=new pg.Client({
-  user:DB_USER,
-  host:DB_HOST,
-  database:DB_DATABASE,
-  password:DB_PASSWORD,
-  port:DB_PORT
+  user:process.env.DB_USER,
+  host:process.env.DB_HOST,
+  database:process.env.DB_DATABASE,
+  password:process.env.DB_PASSWORD,
+  port:process.env.DB_PORT
 })
 db.connect();
 async function mark_visited(){
@@ -20,11 +23,13 @@ let visited=[];
     res.rows.forEach((country)=>{
       visited.push(country.country_code);
     })
-
+  console.log(visited);
   return visited;
 }
 app.get("/",async (req,res)=>{
   let countries=await mark_visited();
+  console.log(countries);
+  console.log(JSON.stringify(countries));
 res.render("index.ejs",{countries:countries,total:countries.length});
 })
 

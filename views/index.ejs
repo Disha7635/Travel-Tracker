@@ -376,12 +376,19 @@
   <script>
     //  when ejs does templating it converts it in string so it is not an array
     let country_codes = "<%= countries %>".split(",") 
+    console.log(country_codes)
     console.log(typeof ("<%= countries %>"))
     country_codes.forEach(code => {
-      document.getElementById(code).style.fill = 'teal'
+      // console.log(code);
+      // document.getElementById(code).style.fill = 'teal'
+      let element = document.getElementById(code); 
+      if (element) {
+        element.style.fill = 'teal';
+      } else {
+        console.log(`Element with id ${code} not found.`);
+      }
     });
 
   </script>
 </body>
-
 </html>
