@@ -9,13 +9,19 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 env.config();
-const db=new pg.Client({
-  user:process.env.DB_USER,
-  host:process.env.DB_HOST,
-  database:process.env.DB_DATABASE,
-  password:process.env.DB_PASSWORD,
-  port:process.env.DB_PORT
-})
+// const db=new pg.Client({
+//   user:process.env.DB_USER,
+//   host:process.env.DB_HOST,
+//   database:process.env.DB_DATABASE,
+//   password:process.env.DB_PASSWORD,
+//   port:process.env.DB_PORT
+// })
+const db = new pg.Client({
+  connectionString: process.env.DATABASE_URL, 
+  ssl: {
+    rejectUnauthorized: false 
+  }
+});
 db.connect();
 async function mark_visited(){
 const res=await db.query("SELECT country_code from visited_countries");
