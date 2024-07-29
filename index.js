@@ -19,6 +19,7 @@ env.config();
 const db = new pg.Client({
   connectionString: process.env.DATABASE_URL, 
   ssl: {
+    require: true, 
     rejectUnauthorized: false 
   }
 });
