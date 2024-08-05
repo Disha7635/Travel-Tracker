@@ -1,3 +1,4 @@
+
 html {
   box-sizing: border-box;
 }
@@ -11,7 +12,7 @@ body {
   height: 100%;
 }
 body {
-  background: #21252b;
+  background: #898cd8;
 
   color: #d3ddef;
 }
@@ -101,4 +102,209 @@ button {
   padding: 15px;
   left: 0;
   bottom: 0;
+}
+
+header {
+  background-color: #2e2659;
+  margin: 0;
+  padding: 0;
+}
+#header-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  box-shadow: 8px 8px rgb(31, 30, 46);
+  margin-bottom: 15px;
+}
+
+#auth-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  
+}
+
+.auth {
+  padding: 7px;
+  color: #fbfcfe;
+  font-weight: bold;
+}
+.auth a {
+  text-decoration: none;
+  color: #fbfcfe;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 15px;
+  position: fixed;
+  bottom: 0;
+  color: #fbfcfe;
+}
+
+
+/* Home page css */
+
+
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-title {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+.home-description {
+  text-align: center;
+  color: #555;
+  margin: 20px 0;
+}
+
+.home-about {
+  margin: 20px 0;
+}
+
+.home-about-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.home-about-text {
+  text-align: center;
+  color: #555;
+  margin: 0 20px;
+}
+
+.home-benefits {
+  margin: 20px 0;
+}
+
+.home-benefits-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.home-benefits-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.home-benefit-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+}
+
+.home-benefit-item:last-child {
+  border-bottom: none;
+}
+
+.home-call-to-action {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.home-cta-text {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.home-btn-primary {
+  background-color: #007bff;
+}
+
+.home-btn-secondary {
+  background-color: #6c757d;
+}
+/* Home page css end */
+
+.login-container, .register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.login-box, .register-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+.login-title, .register-title {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.login-label, .register-label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: #2c3e50;
+}
+
+.login-input, .register-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-button, .register-button {
+  background: #212c39;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.login-google-button, .register-google-button {
+  background: #0e51fa;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-text, .register-text {
+  color: #2c3e50;
+}
+
+.login-link, .register-link {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.login-link:hover, .register-link:hover {
+  text-decoration: underline;
 }

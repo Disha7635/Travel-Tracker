@@ -10,7 +10,7 @@ import GoogleStrategy from "passport-google-oauth2";
 
 //sol2 where add button adds visited countries and they are showed on map and it keeps the countries in a list forever as it is a tracker
 const app = express();
-const port = 3000;
+const port = 3001;
 const saltRounds=10;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -158,7 +158,7 @@ passport.use("google",
 new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENTID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: "http://localhost:3000/auth/google/tracker",
+  callbackURL: "http://localhost:3001/auth/google/tracker",
   userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
 
 }, async(accessToken, refreshToken, profile, cb)=> {
@@ -185,10 +185,6 @@ passport.serializeUser((user,cb)=>{
 passport.deserializeUser((user,cb)=>{
   cb(null,user);
 })
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
-
 
 app.post("/add",async (req,res)=>{
     let country=req.body["country"];

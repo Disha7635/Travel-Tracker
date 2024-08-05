@@ -1,16 +1,30 @@
 <%- include('partials/header') %>
 
-
-<div class="jumbotron centered">
-  <div class="container">
-    <i class="fas fa-key fa-6x"></i>
-    <h1 class="display-3">Secrets</h1>
-    <p class="lead">Don't keep your secrets, share them anonymously!</p>
-    <hr>
-    <a class="btn btn-light btn-lg" href="/register" role="button">Register</a>
-    <a class="btn btn-dark btn-lg" href="/login" role="button">Login</a>
-
+<div class="home-container">
+  <h1 class="home-title">Welcome to Travel Tracker</h1>
+  <p class="home-description">Track and visualize the countries you've visited. Our platform helps you keep a record of your travels and explore new destinations.</p>
+  
+  <div class="home-about">
+      <h2 class="home-about-title">About Travel Tracker</h2>
+      <p class="home-about-text">Travel Tracker is your personal travel diary where you can log the countries you've visited and see them highlighted on an interactive map. Easily keep track of your travels and reminisce about your adventures.</p>
+  </div>
+  
+  <div class="home-benefits">
+      <h2 class="home-benefits-title">Why Use Travel Tracker?</h2>
+      <ul class="home-benefits-list">
+          <li class="home-benefit-item">Keep an organized record of your travel history</li>
+          <li class="home-benefit-item">Visualize your travels on a world map</li>
+          <li class="home-benefit-item">Plan future trips with ease</li>
+          <li class="home-benefit-item">Get insights into your travel patterns</li>
+      </ul>
+  </div>
+  
+  <div class="home-call-to-action">
+      <p class="home-cta-text">Join Travel Tracker today and start logging your adventures!</p>
+      <a href="/register" class="home-btn home-btn-primary">Sign Up</a>
+      <a href="/login" class="home-btn home-btn-secondary">Login</a>
   </div>
 </div>
+
 
 <%- include('partials/footer') %>
