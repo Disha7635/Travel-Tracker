@@ -308,3 +308,7 @@ header {
 .login-link:hover, .register-link:hover {
   text-decoration: underline;
 }
+
+#main-map-body {
+  background-color:#181919;
+}
